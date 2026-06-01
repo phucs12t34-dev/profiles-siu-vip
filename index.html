@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile của Phúc và Lộc</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #e5eef8;
+      background:
+        radial-gradient(circle at top left, rgba(0, 122, 204, 0.24), transparent 34%),
+        linear-gradient(135deg, #0d1117 0%, #111827 44%, #102033 100%);
+      line-height: 1.6;
+    }
+
+    header {
+      background:
+        linear-gradient(rgba(13, 17, 23, 0.74), rgba(13, 17, 23, 0.86)),
+        repeating-linear-gradient(90deg, rgba(88, 166, 255, 0.14) 0 1px, transparent 1px 52px),
+        repeating-linear-gradient(0deg, rgba(63, 185, 80, 0.08) 0 1px, transparent 1px 52px),
+        linear-gradient(135deg, #007acc, #1f6feb 45%, #238636);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    nav {
+      background: rgba(13, 17, 23, 0.92);
+      border-bottom: 1px solid rgba(88, 166, 255, 0.28);
+      padding: 14px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 14px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 45px 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      color: #f0f6fc;
+    }
+
+    .intro {
+      background: rgba(22, 27, 34, 0.88);
+      border: 1px solid rgba(88, 166, 255, 0.18);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .profile-card {
+      background: rgba(22, 27, 34, 0.92);
+      border: 1px solid rgba(88, 166, 255, 0.2);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+    }
+
+    .photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #007acc, #238636);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      border: 3px solid rgba(88, 166, 255, 0.6);
+      box-shadow: 0 0 0 6px rgba(88, 166, 255, 0.08);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .profile-card h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #f0f6fc;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(35, 134, 54, 0.2);
+      color: #7ee787;
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .hobby-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .hobby-list li {
+      background: rgba(22, 27, 34, 0.92);
+      border: 1px solid rgba(88, 166, 255, 0.18);
+      border-radius: 8px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #003b5c, #0e639c 48%, #238636);
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      padding: 35px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 22px 44px rgba(0, 122, 204, 0.28);
+    }
+
+    .contact h2 {
+      color: #fff86b;
+      text-shadow: 0 2px 12px rgba(255, 248, 107, 0.22);
+    }
+
+    .contact a {
+      color: #fff86b;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      color: #9da7b3;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      .profile-grid,
+      .hobby-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Xin chào, chúng mình là Phúc và Lộc</h1>
+    <p>Website giới thiệu hồ sơ, sở thích và niềm đam mê công nghệ thông tin của hai người bạn.</p>
+  </header>
+
+  <nav>
+    <a href="#about">Giới thiệu</a>
+    <a href="#profiles">Hồ sơ</a>
+    <a href="#hobbies">Sở thích</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+
+  <section id="about">
+    <div class="intro">
+      <h2>Giới Thiệu Website</h2>
+      <p>
+        Chào mừng bạn đến với website profile của chúng mình. Trang web này giới thiệu
+        thông tin cá nhân, sở thích, mục tiêu và cách liên hệ với hai người bạn có chung
+        niềm đam mê về công nghệ thông tin, lập trình và robotics.
+      </p>
+    </div>
+  </section>
+
+  <section id="profiles">
+    <h2>Hồ Sơ Của Chúng Mình</h2>
+    <div class="profile-grid">
+      <div class="profile-card">
+        <img class="photo" src="assets/phuc.jpg" alt="Ảnh đại diện của Nguyễn Thanh Phúc">
+        <h3>Nguyễn Thanh Phúc</h3>
+        <span class="tag">Học sinh THCS</span>
+        <p>
+          Xin chào, mình là Nguyễn Thanh Phúc. Mình thích học công nghệ, viết code,
+          xây dựng website và khám phá những ý tưởng mới trong lĩnh vực tin học.
+        </p>
+        <ul>
+          <li>Tuổi: 15</li>
+          <li>Trường: THCS Lê Quí Đôn</li>
+          <li>Môn học yêu thích: Công nghệ thông tin</li>
+        </ul>
+      </div>
+
+      <div class="profile-card">
+        <img class="photo" src="assets/loc.jpg" alt="Ảnh đại diện của Phạm Bửu Lộc">
+        <h3>Phạm Bửu Lộc</h3>
+        <span class="tag">Bạn thân</span>
+        <p>
+          Đây là bạn thân của mình. Lộc thân thiện, chăm chỉ và cũng rất đam mê
+          công nghệ thông tin giống mình. Chúng mình thích học tập và làm các dự án
+          sáng tạo cùng nhau.
+        </p>
+        <ul>
+          <li>Tuổi: 15</li>
+          <li>Trường: THCS Lê Quí Đôn</li>
+          <li>Môn học yêu thích: Công nghệ thông tin</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <h2>Sở Thích Của Chúng Mình</h2>
+    <ul class="hobby-list">
+      <li>Nghe nhạc</li>
+      <li>Chơi thể thao</li>
+      <li>Học viết code</li>
+      <li>Học và xây dựng robotics</li>
+      <li>Thích chụp hình</li>
+      <li>Chơi game cùng nhau</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Liên Hệ Với Chúng Mình</h2>
+      <p>Email: <a href="mailto:phucs12t34@gmail.com">phucs12t34@gmail.com</a></p>
+      <p>Điện thoại: 0919989049</p>
+      <p>Địa chỉ: Thành phố Cần Thơ, Việt Nam</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Profile của Phúc và Lộc. Made with HTML and CSS.</p>
+  </footer>
+</body>
+</html>
